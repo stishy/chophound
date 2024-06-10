@@ -42,7 +42,7 @@ while($i*$ChunkSize -lt $js.data.Count)
         $tagname, `
         ($js.data[($i*$ChunkSize)..((($i+1)*$ChunkSize)-1)] | ConvertTo-Json -Depth 100 -Compress), `
         ($meta | ConvertTo-Json -Compress) `
-        | Out-File $outname -NoNewline -Encoding UTF8BOM
+        | Out-File $outname -NoNewline -Encoding UTF8
     
     $i++
 }
